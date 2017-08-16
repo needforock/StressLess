@@ -20,6 +20,7 @@ public class PendingsFragment extends Fragment implements PendingClickListener {
 
     PendingAdapter pendingAdapter;
 
+
     public PendingsFragment() {
     }
 
@@ -28,6 +29,8 @@ public class PendingsFragment extends Fragment implements PendingClickListener {
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_main, container, false);
     }
+
+
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -44,9 +47,14 @@ public class PendingsFragment extends Fragment implements PendingClickListener {
 
     }
 
+
+
     public void updateList(Pending pending) {
         pendingAdapter.update(pending);
+    }
 
+    public void updateByName(String name){
+        pendingAdapter.updateByName(name);
     }
 
     @Override

@@ -15,7 +15,7 @@ import android.widget.ImageButton;
 
 import ve.needforock.stressless.models.Pending;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SearchListener {
 
     private PendingsFragment pendingsFragment;
 
@@ -85,5 +85,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void search(String name) {
+
+        pendingsFragment.updateByName(name);
     }
 }

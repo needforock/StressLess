@@ -87,8 +87,19 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.ViewHold
     }
 
     public void update (Pending pending){
-        pendings.add(pending);
+        List<Pending> nuevalista = new Queries().pendings();
+        pendings.clear();
+        pendings.addAll(nuevalista);
         notifyDataSetChanged();
+
+    }
+
+    public void updateByName(String name){
+        List<Pending> byName = new Queries().byName(name);
+        pendings.clear();
+        pendings.addAll(byName);
+        notifyDataSetChanged();
+
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder{
