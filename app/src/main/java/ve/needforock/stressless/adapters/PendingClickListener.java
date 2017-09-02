@@ -1,4 +1,4 @@
-package ve.needforock.stressless;
+package ve.needforock.stressless.adapters;
 
 /**
  * Created by Soporte on 16-Aug-17.

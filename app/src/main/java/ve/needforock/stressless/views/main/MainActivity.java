@@ -1,4 +1,4 @@
-package ve.needforock.stressless;
+package ve.needforock.stressless.views.main;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -13,7 +13,9 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import ve.needforock.stressless.R;
 import ve.needforock.stressless.models.Pending;
+import ve.needforock.stressless.searches.SearchListener;
 
 public class MainActivity extends AppCompatActivity implements SearchListener {
 

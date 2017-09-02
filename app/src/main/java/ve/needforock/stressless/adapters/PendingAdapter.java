@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import ve.needforock.stressless.PendingClickListener;
 import ve.needforock.stressless.R;
 import ve.needforock.stressless.data.Queries;
 import ve.needforock.stressless.models.Pending;
@@ -39,7 +38,7 @@ public class PendingAdapter extends RecyclerView.Adapter<PendingAdapter.ViewHold
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
 
-        final Pending pending = pendings.get(position);
+        Pending pending = pendings.get(position);
         holder.textView.setText(pending.getName());
         holder.checkBox.setChecked(pending.isDone());
 

@@ -1,5 +1,6 @@
-package ve.needforock.stressless;
+package ve.needforock.stressless.views.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,16 +9,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
+import ve.needforock.stressless.R;
 import ve.needforock.stressless.adapters.PendingAdapter;
+import ve.needforock.stressless.adapters.PendingClickListener;
 import ve.needforock.stressless.models.Pending;
+import ve.needforock.stressless.views.details.DetailsActivity;
 
 /**
  * A placeholder fragment containing a simple view.
  */
 public class PendingsFragment extends Fragment implements PendingClickListener {
-
+    public static final String PENDING_ID = "ve.needforock.stressless.views.main.KEY.PENDING_ID";
     PendingAdapter pendingAdapter;
 
 
@@ -59,6 +62,9 @@ public class PendingsFragment extends Fragment implements PendingClickListener {
 
     @Override
     public void clickedId(long id) {
-        Toast.makeText(getContext(), String.valueOf(id), Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(getActivity(), DetailsActivity.class);
+        intent.putExtra(PENDING_ID, id);
+        startActivity(intent);
     }
 }

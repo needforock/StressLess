@@ -1,4 +1,4 @@
-package ve.needforock.stressless;
+package ve.needforock.stressless.searches;
 
 
 import android.content.Context;
@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 
+import ve.needforock.stressless.R;
 import ve.needforock.stressless.data.Queries;
 
 
